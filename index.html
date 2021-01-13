@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+  <title>Persona 505</title>
+</head>
+<body>
+    <!----------------------------- MENU ------------------------------------------------->
+  <div class="container">
+    <nav class="sidebar">
+      <div class="hamburger-menu">
+        <div class="menu"> <img src="img/menu_btn.png" alt="menu Persona 5"> </div>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-title"><a href="#" class="nav-link"><h1 class="nav-link-text">Loader</h1></a>
+          <ul class="subnav-list">
+            <li><a href="#" onclick="loading()" class="subnav-link"><span>Loading</span></a></li>
+            <li><a href="https://megamitensei.fandom.com/wiki/Ryuji_Sakamoto/Gallery#Persona_5" class="subnav-link"><span>Ryuji Sakamoto</span></a></li>
+            <li><a href="https://megamitensei.fandom.com/wiki/Morgana/Gallery#Persona_5" class="subnav-link"><span>Morgana</span></a></li>
+          </ul>
+        </li>
+        <li class="nav-title"><a href="#" class="nav-link"><h1 class="nav-link-text">Phantom Thief</h1></a>
+          <ul class="subnav-list">
+            <li><a href="https://www.youtube.com/watch?v=hQFeylO_F9o" class="subnav-link"><span>Missions</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=UkEWQ0jLO6c" class="subnav-link"><span>Réunion</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=sDkdZpQguBM" class="subnav-link"><span>DeadLine</span></a></li>
+          </ul>
+        </li>
+        <li class="nav-title"><a href="#" class="nav-link"><h1 class="nav-link-text">DLC</h1></a>
+          <ul class="subnav-list">
+            <li><a href="https://personacentral.com/persona-5-dlc-costume-image-gallery/" class="subnav-link"><span>Costumes</span></a></li>
+            <li><a href="spotify:album:4pJT0WKggr4xk149X8A6KC" class="subnav-link"><span>OST</span></a></li>
+            <li><a href="https://www.behindthevoiceactors.com/video-games/Persona-5/" class="subnav-link"><span>Voix</span></a></li>
+          </ul>
+        </li>
+        <li class="nav-title"><a href="#" class="nav-link"><h1 class="nav-link-text">Cartes</h1></a></li>
+        <li class="nav-title"><a href="#" class="nav-link"><h1 class="nav-link-text">Options</h1></a></li>
+      </ul>
+    </nav>
+  </div>
+    <!----------------------------- loader + header ------------------------------------------------->
+  <section>
+    <header>
+      <img src="img/header-bg.png" alt="header de persona 5">
+      <div class="akira"></div>
+      <img src="img/hattexte.png" alt="icône Phantom Thief animé" class="hat-anime" id="hat">
+      <div class="backdrop close" id="myModal" onclick="document.getElementById('myModal').style.display='none'">
+        <div class="loader">
+          <div class="loading"></div>
+          <p class="load">LOADING ...</p>
+        </div>
+      </div>
+    </header>
+  </section>
+  <script src="JS/main.js"></script>
+
+</body>
+</html>

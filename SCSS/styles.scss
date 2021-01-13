@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+span {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav-link-text {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.3rem;
+}
+
+.sidebar {
+    box-sizing: border-box;
+    padding: 1.5rem 1rem;
+    width: 15vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    left: -15vw;
+    z-index: 1;
+    transition: left 0.1s;
+}
+
+.change .sidebar {
+    left: 0;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    right: -1.5rem;
+    top: 0;
+    transition: right 0.3s 0.3s;
+    
+    &:hover {
+        animation: boing 0.7s ease infinite;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 1.2rem;
+}
+
+@keyframes boing {
+    from {
+        top: 10px;
+    }
+    
+    50% {
+        top: 16px;
+    }
+    
+    to {
+        top: 10px;
+    }
+}
+
+.nav-title {
+    margin: 2rem 0;
+}
+
+.nav-link {
+    color: white;
+    
+    &:hover {
+        color: red;
+    }
+}
+
+.nav-link-text {
+    font-size: 1.8rem;
+    padding-left: 1rem;
+}
+
+.subnav-list {
+    width: 90%;
+    margin-left: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.change.subnav-list {
+    max-height: 10rem;
+}
+
+.subnav-link {
+    font-size: 1.5rem;
+    color: white;
+    
+    &:hover {
+        color: red;
+    }
+}
+
+header {
+    height: 100vh;
+    overflow: hidden;
+    background: url(../img/character-bg.jpg);
+}
+
+.akira {
+    height: 100%;
+    width: 750px;
+    float: right;
+    background-image: url("../img/akiraanime.png");
+    animation: akira 2s steps(2) infinite;
+    background-repeat: no-repeat;
+}
+
+@keyframes akira {
+    from {
+        background-position: 0px 0px;
+    }
+    
+    to {
+        background-position: -1579px 0px;
+    }
+}
+
+.hat-anime {
+    float: right;
+    position: relative;
+    animation: hat 3s ease;
+    cursor: pointer;
+}
+
+@keyframes hat {
+    0% {
+        transform: rotateY(0deg);
+    }
+    
+    50% {
+        transform: rotateY(720deg);
+    }
+}
+
+.backdrop {
+    display: none;
+    background: rgba(0, 0, 0, 0.384);
+    z-index: 1111;
+    position: fixed;
+    width: 100%;
+    left: 15%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 1111;
+}
+
+.load {
+    width: 240px;
+    height: 130px;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Bangers', cursive;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-20%, 50%);
+}
+
+.loading {
+    width: 240px;
+    height: 130px;
+    background-image: url("../img/preload.png");
+    animation: loadanime 1s infinite;
+}
+
+@keyframes loadanime {
+    to {
+        transform: rotateY(0deg);
+    }
+    
+    from {
+        transform: rotateY(360deg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 25vw;
+        left: -25vw;
+    }
+    
+    .change .main-section{
+        left: 25vw;
+        width: 75vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 30vw;
+        left: -30vw;
+    }
+    
+    .change .main-section{
+        left: 30vw;
+        width: 70vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 50vw;
+        left: -50vw;
+    }
+    
+    .change .main-section{
+        left: 50vw;
+        width: 50vw;
+    }
+    
+    .backdrop {
+        width: 100%;
+        left: 20%;
+    }
+}
+
+@media (max-width: 300px) {
+    .sidebar {
+        width: 100vw;
+        left: -100vw;
+    }
+    
+    .change .main-section{
+        left: 100vw;
+        width: 0;
+    }
+}
